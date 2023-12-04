@@ -58,7 +58,7 @@
 /* theme default css */
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: '微软雅黑', sans-serif;
     font-weight: normal;
     font-style: normal;
 }
@@ -143,11 +143,11 @@ li {
 }
 
 p {
-    font-family: 'Poppins', sans-serif;
+    font-family: '微软雅黑', sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 28px;
-    color: #656970;
+    color: black;
     margin: 0px;
 }
 
