@@ -1,4 +1,4 @@
-﻿/*
+/*
   Theme Name: appnox - Product Landing HTML5 Template
   Author: theme_group
   Support: robiulislamfree@gmail.com
@@ -58,7 +58,7 @@
 /* theme default css */
 
 body {
-    font-family: '微软雅黑', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: normal;
     font-style: normal;
 }
@@ -67,6 +67,9 @@ img {
     max-width: 100%;
     height: auto;
     transition: all 0.3s ease-out 0s;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 a,
@@ -114,14 +117,22 @@ h1,
 h2,
 h3,
 h4,
-h5,
+/*h5,*/
 h6 {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: '微软雅黑', sans-serif;
     color: #353858;
     margin: 0px;
     padding: 0px;
     font-style: normal;
-    font-weight: 400;
+    /*font-weight: 400;*/
+    margin-top: 80px;
+    font-weight: bold;
+
+}
+h5 {
+    font-weight: bold;
+    font-family: '微软雅黑', sans-serif;
+    color: black;
 }
 
 h1 a,
@@ -139,12 +150,15 @@ ul {
 }
 
 li {
-    list-style: none
+    list-style: none;
+    margin-bottom: 10px;
+    line-height: 28px;
+    margin-left: 20px;
 }
 
 p {
     font-family: '微软雅黑', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 28px;
     color: black;
@@ -1629,7 +1643,9 @@ button.submit-btn {
 .blog-details-content h5,
 .blog-details-content h6 {
     margin: 10px 0 25px;
-    font-weight: 500;
+    margin-top: 30px;
+    font-weight: bolder;
+    font-family: "微软雅黑";
 }
 
 .blog-details-content h3 {
