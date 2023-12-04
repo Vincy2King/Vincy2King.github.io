@@ -120,7 +120,7 @@
                             <h5>1.2 模型架构</h5>
                             <p>InternLM-XComposer整体架构由3部分组成，包括视觉编码器、LLM-model (本文即InternLM) 和对齐模块(报告中称为Perceive Sampler，感知采样器)。
                             </p>
-                            <img src="images\VLM\1-1.png" alt="">
+                            <div style="text-align: center"><img src="images\VLM\1-1.png" alt="" style="zoom:80%"></div>
                             <ul>
                                 <li style="list-style-type: disc">
                                     <b>视觉编码器：</b>InternLMXComposer 中的视觉编码器采用 EVA-CLIP，这是标准 CLIP的改进版本，用mask图像的方式增强了模型的建模能力，能够更有效地捕捉输入图像的视觉细节。在该模块中，图像被调整为统一的 224×224 尺寸，然后以步长为14的方式切割成图块。这些图块作为输入token，再利用transformer中的自注意力机制，从而提取图像embeddings。
@@ -135,7 +135,7 @@
                             <h5>1.3 Training</h5>
                             <p>InternLM-XComposer的训练过程分为 A 阶段和 B 阶段。A 阶段作为预训练阶段，利用大量数据训练基座模型。B阶段是监督微调，先做多任务训练，再做指令微调。在多任务训练后得到InternLM-XComposer-VL模型，在指令微调得到InternLM-XComposer模型。</p>
                             <p><b>（1） Pre-training阶段</b>：预训练基座视觉语言模型阶段利用了大量的图像-文本对(网络爬取)和交错的图像-文本数据。这些数据包括中英文两种语言的多模态数据。为了保持大型语言模型的语言能力，在 InternLM <b>预训练阶段</b>使用的<b>部分文本数据</b>也在 InternLM-XComposer 的<b>预训练阶段</b>中使用。如Table 1 所示：</p>
-                            <img src="images\VLM\1-2.png" alt="">
+                            <div style="text-align: center"><img src="images\VLM\1-2.png" alt="" style="zoom:80%"></div>
                             <p>图像-文本对方面，使用了 11 亿张图像和 677 亿个文本token(其中506亿个英文文本token和171亿个中文文本token)，包括公开数据集和从内部数据(从网站爬取收集)，
                                 总共超过 1100 万个语义概念。内部数据集In-house Data有一个开放的子集：书生·万卷文本数据集。
                                 这个开源数据集，包含三个部分：纯文本格式数据集、文本-图像对数据集和视频数据集，可以从官网下载到，
@@ -154,9 +154,9 @@
                                 所以，整个监督微调阶段，其实由多任务训练和指令微调组成。</p>
                             <p><b>多任务训练</b>。多任务训练数据集如Table 2 所示，这些任务包括场景理解（例如 COCO Caption，SUB）、位置理解（例如 Visual Spatial Reasoning 数据集）、
                                 光学字符识别OCR（例如 OCR-VQA）以及开放式回答（例如 VQAv2 ，GQA）等。</p>
-                            <img src="images\VLM\1-3.png" alt="">
+                            <div style="text-align: center"><img src="images\VLM\1-3.png" alt="" style="zoom:80%"></div>
                             <p>每个任务都被设计成会话交互形式，具体格式如下：</p>
-                            <img src="images\VLM\1-4.png" alt="" style="zoom:67%";>
+                            <div style="text-align: center"><img src="images\VLM\1-4.png" alt="" style="zoom:67%"></div>
                             <p>其中&lt;eou&gt;和&lt;eob&gt; 分别表示用户和机器人结束token。对于每张图像具有多个问题的QVA数据集，将其构造成多轮对话，
                                 问题随机排序，从而大大提高了 SFT 过程的效率。在这个阶段，所有问题都通过人工编写的提示引入，以增加任务的多样性。
                                 为了实现稳定且高效的微调，将大型语言模型的权重冻结，然后使用 Low-Rank Adaption（LoRA）架构进行模型微调。
@@ -165,7 +165,7 @@
                                 模型在10,000次迭代训练中使用全局batch size，值为256。LoRA 层和感知采样器的学习速率分别设置为 5e-5和 2e-5。</p>
                             <p><b>指令微调</b>。为了进一步提升上述模型的指令跟随和交错的图像-文本组合能力，使用来自纯文本对话语料库和LLava-150k 的数据进行指令微调。此外，使用 LRV 数据集减轻幻觉。交错的图像-文本组合数据集的构建方法，可以查阅原始技术报告，这里略过。Batch size=256，并在1000 次迭代中使用较小的学习速率=1e-5。</p>
                             <h5>1.4 Application</h5>
-                            <img src="images\VLM\1-5.png" alt="">
+                            <div style="text-align: center"><img src="images\VLM\1-5.png" alt="" style="zoom:80%"></div>
 
                             <h3 id="section2" style="color: coral;margin-top: 50px;font-weight: bold"><a
                                     href="https://github.com/PCIResearch/TransCore-M">2. TransCore-M</a>
@@ -186,7 +186,7 @@
                                 </li>
                             </ul>
                             <h5>2.1 模型架构与训练</h5>
-                            <img src="images\VLM\2-1.png" alt="">
+                            <div style="text-align: center"><img src="images\VLM\2-1.png" alt="" style="zoom:80%"></div>
                             <p>TransCore-M 采用预训练和指令微调两种训练策略，来提升模型的多模态能力：</p>
                             <ul>
                                 <li style="list-style-type: disc">
@@ -231,7 +231,7 @@
                             <h5>3.2 模型架构</h5>
                             <h6>3.2.1 模型权重、调优任务和视觉嵌入的联合混合</h6>
                             SPHINX 的整体混合模式如下图 Figure 3 所示，包括：
-                            <img src="images\VLM\3-1.png" alt="">
+                            <div style="text-align: center"><img src="images\VLM\3-1.png" alt="" style="zoom:80%"></div>
                             <ul>
                                 <li style="list-style-type: disc">
                                     <b>Task Mix.</b> For all-purpose capabilities, we mix a variety of vision-language tasks for mutual improvement: VQA, REC, REG, OCR, DET, POSE, REL DET, T2I, etc.
@@ -267,7 +267,7 @@
 
                             <h6>3.2.2 标度和高分辨率子图像的混合</h6>
                             <p>通过上述联合混合策略，SPHINX 已经在各种视觉感知和推理任务上展示了卓越的性能。然而，仍然存在一个关键挑战，即输入图像的分辨率有限。为了解决这个问题，作者进一步建议利用高分辨率子图像的混合视觉 Token，如下图 Figure 4 所示：</p>
-                            <img src="images\VLM\3-2.png" alt="">
+                            <div style="text-align: center"><img src="images\VLM\3-2.png" alt="" style="zoom:80%"></div>
                             <p style="font-weight: bold">（1）低分辨率约束（Low-resolution constraints of MLLMs）</p>
                             <p>
                                 当前很多 LLM 在预训练期间会冻结 vision encoder，以保持预训练的视觉语义，因此图像分辨率还会维持在 224x224，这阻碍了其对细粒度视觉语义感知的能力，尤其是区域级的定位和描述。此外，直接对图像上采样也不是最佳选择：
@@ -289,27 +289,27 @@
                             <p>除了多种任务的视觉指令遵循外，作者还将 SPHINX 与其他视觉基础模型集成，以应对更有挑战的任务。</p>
                             <ul>
                                 <li style="list-style-type: disc"><b>语言指示分割</b>（Language-referred segmentation）：鉴于 SPHINX 可以基于用户提供的描述输出语义类别的准确检测框，因此可以级联 SAM 进行语言指示实例或语义分割。具体来说，将 SPHINX 预测的边界框视为框提示，并输入到 SAM 中，以便对相应的实例进行分割，如下图 Figure 5 所示：</li>
-                                <img src="images\VLM\3-3.png" alt="">
+                                <div style="text-align: center"><img src="images\VLM\3-3.png" alt="" style="zoom:80%"></div>
                                 <li style="list-style-type: disc"><b>图像修复和编辑</b>（Image inpainting and editing）：根据 SAM 的分割结果，参考 Inpaint Anything 来集成图像修复模型和文本到图像生成模型用于高质量的图像修复和编辑。具体来说，首先通过 SPHINX 和 SAM 检测和分割用户指示的对象，如上一部分。然后，将分割掩码输入 LaMa，以使用上下文数据删除相应的对象。在此之后，用户可以提示 Stable Diffusion 进一步生成新的视觉内容以替换原始内容。</li>
-                                <img src="images\VLM\3-4.png" alt="">
+                                <div style="text-align: center"><img src="images\VLM\3-4.png" alt="" style="zoom:80%"></div>
                             </ul>
                             <p style="font-weight: bold">（2）针对视觉识别微调（Finetuning SPHINX for Visual Recognition）</p>
                             <p>可以将 SPHINX 作为传统视觉任务的通用初始化，例如，对应 ImageNet-1K 的分类任务，可以将其转换为 “Classify the image” 的单轮对话格式，并使用 “This is a [CLASS]” 作为响应。通过对文本转换后的数据集进行监督微调，能观察到在 ImageNet-1K 上的快速训练收敛。仅使用一个 epoch，SPHINX 就可以在没有任何数据增强的情况下达到 70.8% 的分类准确率。</p>
 
                             <h5>3.4 Discussion</h5>
                             <p><b>（1）图文联合预训练</b>（Image-text joint pre-training）： 从实验可以看出，如果只使用多模态数据训练，会导致 LLM 对纯文本预测性能的下降（灾难性遗忘）。</p>
-                            <img src="images\VLM\3-5.png" alt="">
+                            <div style="text-align: center"><img src="images\VLM\3-5.png" alt="" style="zoom:80%"></div>
                             <p style="font-weight: bold">（2）评估 prompt 设计（Evaluation prompt design</p>
-                            <img src="images\VLM\3-6.png" alt="">
+                            <div style="text-align: center"><img src="images\VLM\3-6.png" alt="" style="zoom:80%"></div>
                             <p style="font-weight: bold">（3）多模态基准评估（Benchmarks on multi-modal large language models）</p>
                             如下图 Table 2 所示为在 10 个多模态基准上的评估结果，可以看出，SPHINX 在 10 个基准中的 6 个上面获得了 SOTA。在 POPE 指标上的结果表明，提升分辨率可以大幅缓解模型的幻觉问题。
-                            <img src="images\VLM\3-7.png" alt="">
+                            <div style="text-align: center"><img src="images\VLM\3-7.png" alt="" style="zoom:80%"></div>
                             <p style="font-weight: bold">（4）视觉问答（Visual question answering）</p>
                             <p>如下图 Table 3 所示为作者在多个 VQA 任务上的评估结果，可以看出在大部分任务上都获得了很有竞争力的结果，在面向文本的 VQA 上还弱于 Qwen-VL，主要是<b>缺乏文本相关的预训练数据</b>。</p>
-                            <img src="images\VLM\3-8.png" alt="">
+                            <div style="text-align: center"><img src="images\VLM\3-8.png" alt="" style="zoom:80%"></div>
                             <p style="font-weight: bold">（5）视觉定位（Visual grounding）</p>
                             <p>如下图 Table 4 所示为视觉定位的结果，可以看出，使用更大分辨率后在所有指标上获得 SOTA：</p>
-                            <img src="images\VLM\3-9.png" alt="">
+                            <div style="text-align: center"><img src="images\VLM\3-9.png" alt="" style="zoom:80%"></div>
                             <p style="font-weight: bold">（6）混合模型权重（Mixed model weights）</p>
                             <p>论文中并没有提供混合模型权重的结果，不过在 github 的 issue 中有提到，可以参考 https://github.com/Alpha-VLLM/LLaMA2-Accessory/issues/102</p>
                             <p style="font-weight: bold">（7）混合视觉编码器（Mixed Visual Encoder）</p>
@@ -317,19 +317,19 @@
 
                             <h5>3.5 Application</h5>
                             <p style="font-weight: bold">（1） SAM 增强实例分割（SAM-augmented instance segmentation）</p>
-                            <img src="images\VLM\3-10.png" alt="">
+                            <div style="text-align: center"><img src="images\VLM\3-10.png" alt="" style="zoom:80%"></div>
                             <p style="font-weight: bold">（2）区域级理解（Region-level understanding）</p>
-                            <img src="images\VLM\3-11.png" alt="">
+                            <div style="text-align: center"><img src="images\VLM\3-11.png" alt="" style="zoom:80%"></div>
                             <p style="font-weight: bold">（3）通过提示提升物体检测（Improved object detection through hints）</p>
                             <p>作者进一步验证了 SPHINX 在理解用户提示方面的熟练程度。如下图所示，最初让模型预测图像中所有狗会导致错误的识别，然而，在提供有关物体的额外提示后，SPHINX 很好地理解了指令，并准确预测出图像中的所有狗。</p>
                             <p style="font-weight: bold">（4）通过物体检测实现更好的视觉推理（Better visual reasoning with object detection）</p>
                             <p>如下图展示了具有物体检测功能的增强视觉推理能力。值得注意的是，SPHINX 通过最初的指令提示生成了物体检测结果，然后再次请求模型基于检测结果回答问题，获得了不错的结果。这一点证明了多任务训练中，不同任务间的协同作用可以显著提升整体表现。</p>
-                            <img src="images\VLM\3-12.png" alt="">
+                            <div style="text-align: center"><img src="images\VLM\3-12.png" alt="" style="zoom:80%"></div>
                             <p style="font-weight: bold">（5）指示姿态估计（Emergent referring pose estimation）</p>
                             <p>原始的指示物体理解和姿态估计是两个不同的任务。有趣的是，作者通过混合微调，实现了指示姿态估计的涌现能力，即直接从文本描述生成人体关键点。这观察表明，SPHINX 完全理解了不同视觉语言任务的语义，并通过卓越的推理能力将它们隐含地联系起来。</p>
                             <p style="font-weight: bold">（6）缺陷检测（Anamoly detection）</p>
                             <p>工业界中，缺陷检测是一个非常典型的应用场景。如下图所示，SPHINX 在缺陷检测方面也表现出色，虽然没有涉及相关的训练数据，但是 LMM 仍然准确地检测出相关缺陷，表明了 SPHINX 在实际应用中的潜力。</p>
-                            <img src="images\VLM\3-13.png" alt="">
+                            <div style="text-align: center"><img src="images\VLM\3-13.png" alt="" style="zoom:80%"></div>
                             <p style="font-weight: bold">（7）Multi-level dense captioning</p>
                             <p>SPHINX 经过多样化的多任务训练，可以通过自我迭代提示的方式生成多级密集描述。</p>
                             <ul>
@@ -337,7 +337,7 @@
                                 <li style="list-style-type: disc">然后，迭代地提示每个区域，并提示 “Please provide a short description for this region : [x1, y1, x2, y2]” 来获得每个区域的简单属性。</li>
                                 <li style="list-style-type: disc">为了更深入的了解检测到的区域，作者根据检测结果截取所有图像，每个截取后的图像都独立输入 SPHINX 中，并带有两个提示：“Provide a one-sentence caption for the provided image.” 和 “Generate a detailed description about the image.”，这样，可以检测图像中显示的所有物体，并用属性、简单描述和详细描述标记所有框</li>
                             </ul>
-                            <img src="images\VLM\3-14.png" alt="">
+                            <div style="text-align: center"><img src="images\VLM\3-14.png" alt="" style="zoom:80%"></div>
 
                             <h3 id="section4" style="color: coral;margin-top: 50px;font-weight: bold"><a
                                     href="https://arxiv.org/abs/2310.03744">4. LLaVA-v1.5-13B</a>
@@ -362,7 +362,7 @@
                             <p>如下图 Table 1 所示，作者研究了数据、模型规模以及图像分辨率等对模型的影响，并在三个评估集 GQA、MME 和 MM-Vet 上进行了效果评估。</p>
                             <div style="text-align: center"><img src="images\VLM\4-1.png" alt="" style="zoom:50%;margin: auto" ></div>
                             <p>作者进一步在 12 个不同的基准上将最终的模型和现有的 LMM 进行比较。结果表明，LLaVA 的结构在视觉指令微调方面非常强大，有很高的数据效率，并且使用比其他所有方法少的多的计算和训练数据实现了 SOTA。</p>
-                            <img src="images\VLM\4-2.png" alt="">
+                            <div style="text-align: center"><img src="images\VLM\4-2.png" alt="" style="zoom:80%"></div>
                             <h5>4.2 格式化响应提示（Response formatting prompts</h5>
                             <p>作者发现，InstructionBLIP 中采用的方法无法在短序列和长序列 VQA 之间取得平衡，主要原因有：</p>
                             <ul>
@@ -441,9 +441,9 @@
                                 <li style="list-style-type: disc"><b>Visual Abstractor</b>：作者采用了类似 Flamingo 的 <b>Perceiver Resampler</b>结构，论文中没有介绍，在代码库的 ISSUE 中有提到 https://github.com/X-PLUG/mPLUG-Owl/issues/10，查看源码也可以看出来，在此之后有一个 Linear 层。需要注意的是，不是直接用视觉特征（Patch Feature）作为 Cross Attention 的 Key 和 Value，而是会先将 Patch Feature 与 Query 拼接（Concatenate），然后做作为 Key 和 Value。</li>
                                 <li style="list-style-type: disc"><b>Large Language Model</b>：直接使用开源的 LLaMA-7B 作为语言模型主干，第二阶段会使用 LoRA 微调。</li>
                             </ul>
-                            <img src="images\VLM\5-2.png" alt="">
+                           <div style="text-align: center"><img src="images\VLM\5-2.png" alt="" style="zoom:80%"></div>
                             <h5>5.3 mPLUG-Owl2 模型架构</h5>
-                            <img src="images\VLM\5-3.png" alt="">
+                            <div style="text-align: center"><img src="images\VLM\5-3.png" alt="" style="zoom:80%"></div>
                             <p>如上图所示为 mPLUG-Owl2 模型的结构，可以看出，主要也是由三部分组成：</p>
                             <ul>
                                 <li style="list-style-type: disc"><b>Vision Encoder</b>：作者采用 CLIP ViT-L/14 作为视觉主干。输入一个 H x W 分辨率的图像，生成 H/14 x W/14 的 Token 序列，对应视觉特征 I=[I1, I2,..., IP]，维度为 P x d，P 表示 Token 数目，d 表示特征维度。其也会作为 Visual Abstractor 的输入。</li>
@@ -542,7 +542,7 @@
                             </ul>
                             <h5>7.2 模型架构</h5>
                             <p>CogVLM模型包括四个基本组件：视觉转换器（ViT）编码器、MLP适配器、预训练的大型语言模型（GPT）和视觉专家模块。CogVLM架构的概述如Figure 3所示。组件的设计和实现细节如下：</p>
-                            <img src="images\VLM\7-1.png" alt="">
+                            <div style="text-align: center"><img src="images\VLM\7-1.png" alt="" style="zoom:80%"></div>
                             <ul>
                                 <li style="list-style-type: disc"><b>ViT编码器。</b>CogVLM-17B使用预训练的EVA2-CLIP-E模型，其中ViT编码器的最后一层被移除，因为它专门用于聚合[CLS]特征进行对比学习。</li>
                                 <li style="list-style-type: disc"><b>MLP适配器</b>是一个两层的MLP，用于将ViT的输出映射到与单词嵌入的文本特征相同的空间。所有图像特征在语言模型中共享相同的位置ID。</li>
@@ -550,9 +550,9 @@
                                 <li style="list-style-type: disc"><b>视觉专家模块</b>通过在每个层中添加视觉专家模块，实现了对图像特征的转换，使其与语言模型的注意力头对齐，从而实现深度融合。视觉专家模块由QKV矩阵和MLP组成，与预训练语言模型的形状相同，并从中初始化。</li>
                             </ul>
                             <p>输入的隐藏状态X是一个四维张量，包含了图像和文本序列的隐藏状态。其中，B是批次大小，L I 和L T 分别是图像和文本序列的长度，H是注意力头的数量，D是隐藏大小。在带有视觉专家的注意力中，X首先被分割为图像隐藏状态$X_I$ 和文本隐藏状态$X_T$ ，然后计算注意力。</p>
-                            <img src="images\VLM\7-2.png" alt="">
+                            <div style="text-align: center"><img src="images\VLM\7-2.png" alt="" style="zoom:80%"></div>
                             <p>视觉专家在FFN层中的表现类似。</p>
-                            <img src="images\VLM\7-3.png" alt="">
+                            <div style="text-align: center"><img src="images\VLM\7-3.png" alt="" style="zoom:80%"></div>
                             其中FFN I和FFN T是两者的神经网络。
                             <h5>7.4 预训练</h5>
                             <p><b>数据。</b>预训练的图像-文本对都是公开可用的，包括LAION-2B和COYO-700M。经过筛选，剩下约15亿张图像用于预训练。</p>
@@ -602,43 +602,43 @@
                             </ul>
                             <h5>8.1 简介</h5>
                             <p>大多数vlm利用视觉提示生成器（VPG）从视觉主干编码的图像特征中提取视觉嵌入，并使用视觉嵌入来帮助llm理解视觉输入。Figure 2.a所示的模型架构属于专注于单个图像提示的VLM，如Blip-2，它总是将图像放在整个输入的顶部，不能处理多个图像的输入，具有few-shot能力的VLM，如Flamingo，将图像编码为具有固定数量的视觉标记的图像嵌入，并在LLM中使用交叉注意来混合视觉和文本内容。与之前的工作不同，图2.c中所示的MMICL平等地对待图像和文本表示，并通过图像声明image declaration建立了图像和文本之间的引用。它使用户能够灵活地以任何所需的顺序输入多个图像和文本，而不受上下文中图像的数量或放置的限制。每个给定的图像都由一个视觉编码器，如ViT进行编码，以获得图像表示。然后，作者使用Q-former作为VPG来提取视觉嵌入，利用一个全连接层作为投影层，将每个视觉嵌入转换为与LLM的文本嵌入相同的维度。最后，将多个图像的视觉嵌入与文本嵌入相结合，并将它们输入LLM。本文将LLM注意层中的映射查询和值向量的权值设置为可学习的，以更好地适应具有多个图像的多模态提示。</p>
-                            <img src="images\VLM\8-6.png" alt="">
+                            <div style="text-align: center"><img src="images\VLM\8-6.png" alt="" style="zoom:80%"></div>
                             <p>MMICL一共有两个基于不同LLM的版本，分别基于Vicuna和FlanT5XL两种核心模型。这两个版本都已经开源，其中，FlanT5XL版可以商用，Vicuna版本只能用于科研用途。在MME的多项任务测试中，FlanT5XL版MMICL的成绩已连续数周保持着领先地位。其中认知方面取得了428.93的总成绩（满分800），位列第一，大幅超过了其他模型。感知方面的总分1381.78（满分2000），在最新版榜单中仅次于阿里的千问-7B和昆仑万维的天工模型。所需配置方面，官方给出的说法是在训练阶段需要6块A40，推理阶段则可以在一块A40上运行。仅仅只需要从开源数据集中构建的0.5M的数据即可完成第二阶段的训练，耗时仅需几十小时。</p>
                             <p style="font-weight: bold">会看视频，还能“现学现卖”</p>
                             <p>MMICL支持文本和图片穿插形式的prompt，用起来就像微信聊天一样自然。用正常说话的方式把两张图喂给MMICL，就可以分析出它们的相似和不同之处。除了超强的图像分析能力，MMICL还知道“现学现卖”。比如我们丢给MMICL一张“我的世界”中像素风格的马。由于训练数据都是真实世界的场景，这种过于抽象的像素风MMICL并不认识。但我们只要让MMICL学习几个例子，它便能很快地进行<b>类比推理</b>。下图中，MMICL分别学习了有马、驴和什么都没有这三种场景，然后便正确判断出了更换背景后的像素马。</p>
-                            <img src="images\VLM\8-1.png" alt="">
+                            <div style="text-align: center"><img src="images\VLM\8-1.png" alt="" style="zoom:80%"></div>
                             <p>除了图片，动态的视频也难不倒MMICL，不仅是理解每一帧的内容，还能准确地分析出时空关系，并且，针对视频当中的细节，也可以向MMICL提问。除了准确把握视频中的时空关系，MMICL还支持实时视频流输入。</p>
                             <h5>8.2 模型架构</h5>
                             <p>MMICL致力于解决视觉语言模型在理解具有多个图像的复杂多模态输入方面遇到的问题。MMICL利用Flan-T5 XXL模型作为骨干，整个模型的结构和流程如下图所示：</p>
-                            <img src="images\VLM\8-2.png" alt="">
+                            <div style="text-align: center"><img src="images\VLM\8-2.png" alt="" style="zoom:80%"></div>
 
                             <p>MMICL使用类似于BLIP2的结构，但是能够接受交错的图文的输入。MMICL将图文平等对待，把处理后的图文特征，都按照输入的格式，拼接成图文交错的形式输入到语言模型中进行训练和推理。类似于InstructBLIP，MMICL的开发过程是将LLM冻结，训练Q-former，并在特定数据集上对其进行微调。MMICL的训练流程和数据构造如下图所示：</p>
-                            <img src="images\VLM\8-4.png" alt="">
+                            <div style="text-align: center"><img src="images\VLM\8-4.png" alt="" style="zoom:80%"></div>
                             <h5>8.3 Context Scheme for MMICL</h5>
                             <p>作者提出了一种新的上下文方案，其中包含一个额外的图像声明部分，并包含图像代理标记，增强了VLM的ICL能力。</p>
-                            <img src="images\VLM\8-3.png" alt="">
+                            <div style="text-align: center"><img src="images\VLM\8-3.png" alt="" style="zoom:80%"></div>
                             <p style="font-weight: bold">（1）Image declaration</p>
                             <p>用户可以使用文本描述来在其查询中引用特定的图像。这样的参考可以向VLM提供关于文本中提到的视觉内容的信息，允许它学习两种模式之间的对齐。为了精确地链接文本和图像，在混合输入中为每个图像形成image declaration模板，如图3.a所示。首先，分配了一个唯一的图像代理（[IMG$_j$]）来引用图像j的视觉嵌入，它为vlm提供了一个唯一的标识符，以索引和区分视觉嵌入和文本嵌入。然后，利用自然语言提示在文本和图像之间建立引用。在image declaration中包含显式的文本到图像的引用，有助于模型将文本与适当的图像关联起来。同时，作为文本内容进行维护的image declaration，也可以保持显示在提示中的任何位置上的灵活性。每个实例$I_i$都遵循该结构，其中$X_i$象征着可以放置在实例$I_i$中的任何地方的图像装饰集。$q_i$和$a_i$分别表示带有指示的问题和相应的答案.</p>
                             <p>$$I_i=(X_i,q_i,a_i)$$</p>
                             <p>例子：图文间建立的显式指代，MIC在图文交错的数据中，插入图片声明（image declaration），使用图片代理（image proxy）token来代理不同的图片，利用自然语言来建立图文间的指代关系。</p>
-                            <img src="images\VLM\8-7.png" alt="">
+                            <div style="text-align: center"><img src="images\VLM\8-7.png" alt="" style="zoom:80%"></div>
 
                             <p style="font-weight: bold">（2）Multi-modal data with interconnected images</p>
                             <p>为了在MMICL的上下文模式中包含丰富的多图像信息，作者生成了包括空间、逻辑和时间关系的互联多图像数据。它有助于MMICL理解用户查询中图像之间的复杂关系。具体来说，从视频中推导出帧来构建多图像数据。从视频中提取的帧本质上维持着密切的时间和空间关系，这将图像之间的空间和时间相关信息注入到上下文方案中。此外，我们还从描述多个对象交互的图像中构建多图像数据。我们检测图像中的对象，并为每个对象生成边界框。我们通过根据边界框裁剪图像来获得不同对象的多个子图像。然后，我们将这些对象对应的裁剪图像替换为它们的文本引用，从而用逻辑和因果互联的图像形成交错的多模态数据，如图3.b所示。每个实例$I_i$由一个问答文本对和K个图像组成，其中$x_{i,k} \in X_i$表示第k个图像的图像声明。</p>
                             <p>$$I_i=(\{x_1,x_2,...,x_k\},q_i,a_i)$$</p>
                             <p>例子：时间或逻辑上互相关联的多图数据集，确保了MMICL模型能对图像间的关系有更准确的理解。</p>
-                            <img src="images\VLM\8-8.png" alt="">
+                            <div style="text-align: center"><img src="images\VLM\8-8.png" alt="" style="zoom:80%"></div>
 
                             <p style="font-weight: bold">（3）Unified multi-modal in-context format for different tasks</p>
                             <p>本文提出了一种针对不同任务生成多模态上下文学习数据的设计方法，以丰富MMICL的上下文方案。它旨在提高VLM的教学感知能力，并扩大其熟练的多模式上下文学习能力。具体来说，首先为每个任务制作不同的指令，并利用这些指令为任务生成不同的模板。然后，用原始任务填充随机选择的模板，以组装配备指令的数据。此外，通过构建从数据中采样实例生成的few-shot样本，将数据转换为多模态的上下文格式。这些示例与输入实例相结合，以生成多模态的上下文内数据。通过这种方式，可以将所有任务转换为统一的多模态上下文格式，如图3.c所示。这种方法促进了收集来自不同任务的大量高质量数据，丰富了MMICL的上下文模式和丰富的多模式上下文数据的多样性。最终，这提高了模型遵循指令的能力和多模态的上下文学习能力。每个实例$I_i$由N个样本组成。</p>
                             <p>$$I_i=(\{P_1,P_2,...,P_N\},q_i,a_i)$$</p>
                             <p>每个范例$P_j=(X_j,q_j,a_j)$，$X_j$表示第j个范例的图像声明。$q_j$和$a_j$分别表示第j个样本的问题和答案。</p>
                             <p>例子：类似于让MMICL“现场学习”的过程，使用多模态的上下文学习来增强MMICL对图文穿插式的复杂图文输入的理解。</p>
-                            <img src="images\VLM\8-9.png" alt="">
+                            <div style="text-align: center"><img src="images\VLM\8-9.png" alt="" style="zoom:80%"></div>
 
                             <h5>8.4 MIC Dataset Construction</h5>
                             <p>为了帮助vlm理解复杂的提示，作者通过从公共数据资源中收集数据并根据上下文方案进行转换来构建MIC数据集。它有三个关键方面，分别对应8.3节内容的三个方面。MIC的训练集来自8个类别的16个数据集，而测试集来自10个类别的18个数据集。</p>
-                            <img src="images\VLM\8-5.png" alt="">
+                            <div style="text-align: center"><img src="images\VLM\8-5.png" alt="" style="zoom:80%"></div>
 
                             <h5>8.5 Training</h5>
                             <p>具体来说，MMICL的训练一共分成了两个阶段：</p>
@@ -682,12 +682,12 @@
                             <h5>9.2 模型架构</h5>
                             <p>特征对齐。我们使用线性投影层将全局图像特征转换到语言嵌入空间。我们不是在特定数据上优化LLM的参数，而是在LLM之外执行人工指令和视觉信息交互。通过这样做，LLM仍然可以保持其原有的权力。</p>
                             <p>交互式感知网络的整体架构示意图。视觉编码器和文本编码器来自CLIP。黑线表示LLM的第一个过程输入，橙色线表示人工查询和视觉信息交互阶段。交互感知网络的整体架构由四个线性层组成，它们是对不同功能的响应。</p>
-                            <img src="images\VLM\9-1.png" alt="">
+                            <div style="text-align: center"><img src="images\VLM\9-1.png" alt="" style="zoom:80%"></div>
                             <h5>9.3 训练</h5>
                             <p><b>多式联运预培训。</b>此阶段旨在训练特征对齐中的线性层。由于CC3M的一些图像没有下载，并且由于字幕质量较差，只使用LAION-400M的部分图像，因此图像-文本对的总数约为6900万。本阶段的优化目标如下：</p>
                             <div style="text-align: center"><img src="images\VLM\9-2.png" alt="" style="zoom: 60%"></div>
                             <p><b>调整后的多模式指令。</b>这一阶段主要通过使用各种多模式的指令跟随数据，使整个交互式感知网络有效。首先，基于来自数据集CC3M、COCO Caption和Flick3k的图像-文本对构建了两种类型的文本-图像对齐数据，以进一步预训练交互式感知网络。</p>
-                            <img src="images\VLM\9-3.png" alt="">
+                            <div style="text-align: center"><img src="images\VLM\9-3.png" alt="" style="zoom:80%"></div>
 
                             <h3 id="section10" style="color: coral;margin-top: 50px;font-weight: bold"><a
                                     href="https://github.com/QwenLM/Qwen-VL">10. Qwen-VL-Chat</a>
@@ -729,16 +729,16 @@
                             </ul>
                             <h5>10.4 Training</h5>
                             <p>Qwen-VL模型的训练过程包括三个阶段:两个阶段的预训练和最后一个阶段的指令微调训练。</p>
-                            <img src="images\VLM\10-2.png" alt="">
+                            <div style="text-align: center"><img src="images\VLM\10-2.png" alt="" style="zoom:80%"></div>
                             <p style="font-weight: bold">（1）Pretraining</p>
                             <p>在预训练的第一阶段主要利用一个大规模的、弱标记的、网络抓取的图像-文本对集合。预训练数据集由几个可公开访问的数据源和一些内部数据组成。如下表所示，原始数据集共包含50亿对图像-文本对，清洗后还剩下14亿对数据，其中英文(文本)数据占77.3%，中文(文本)数据占22.7%。预训练第一阶段训练数据如表2所示：</p>
-                            <img src="images\VLM\10-3.png" alt="">
+                            <div style="text-align: center"><img src="images\VLM\10-3.png" alt="" style="zoom:80%"></div>
                             <p style="font-weight: bold">（2）Multi-task Pre-training</p>
                             <p>在多任务预训练的第二阶段，<b>引入了高质量和细粒度的VL标注数据，具有更大的输入分辨率和交错的图像-文本数据</b>。
                                 如下表所示，同时对Qwen-VL进行了7项任务的训练。对于文本生成，使用内部收集的语料库来保持LLM的能力。
                                 这一阶段<b>将视觉编码器的输入分辨率从224 × 224提高到448 × 448，减少了图像降采样带来的信息损失。</b>
                                 解锁了大的语言模型并训练了整个模型。训练目标与预训练第一阶段相同。</p>
-                            <img src="images\VLM\10-4.png" alt="">
+                            <div style="text-align: center"><img src="images\VLM\10-4.png" alt="" style="zoom:80%"></div>
                             <p style="font-weight: bold">（3）Supervised Fine-tuning</p>
                             <p>在这个阶段主要<b>通过指令微调对Qwen-VL预训练模型进行微调，增强其指令跟随和对话能力，从而形成交互式Qwen-VL- chat模型</b>。
                                 多模态指令调优数据主要来自于通过LLM自指令生成的标题数据或对话数据，通常只解决单图像对话和推理，局限于图像内容理解。
@@ -747,8 +747,7 @@
                             <p>在训练期间，<b>通过只监督答案和特殊tokens(示例中的蓝色)来确保预测和训练分布之间的一致性，而不监督角色名称或问题提示</b>。
                                 在此阶段，冻结了视觉编码器，优化了语言模型和适配器模块。具体来说，Qwen-VL-Chat的全局批大小为128，学习率计划的最大学习率为1e−5，
                                 最小学习率为1e−6，线性热身为3000步。</p>
-                            <img src="images\VLM\10-5.png" alt="">
-
+                            <div style="text-align: center"><img src="images\VLM\10-5.png" alt="" style="zoom:80%"></div>
                             <h5>10.5 Discussion</h5>
                             <p>研究人员在四大类多模态任务（Zero-shot Caption/VQA/DocVQA/Grounding）的标准英文测评中测试了Qwen-VL。结果显示，Qwen-VL取得了同等尺寸开源LVLM的最好效果。另外，研究人员构建了一套基于GPT-4打分机制的测试集<b>TouchStone</b>。在这一对比测试中，Qwen-VL-Chat取得了SOTA。</p>
                         </div>
