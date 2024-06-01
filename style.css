@@ -1,0 +1,50 @@
+/*
+Theme Name: Freebies - Free Resource Sharing Bootstrap 5 HTML CSS Website Template
+Theme URI: https://templatesjungle.com/
+Author: TemplatesJungle
+Author URI: https://templatesjungle.com/
+Description: Freebies is specially designed for Resource Sharing community by TemplatesJungle.
+Version: 1.1
+*/
+
+/*--------------------------------------------------------------
+This is main CSS file that contains custom style rules used in this template
+--------------------------------------------------------------*/
+
+/*------------------------------------*\
+    Table of contents
+\*------------------------------------*/
+/*
+1. Normalize
+2. Base Styles
+  - Clearfix
+  - Floating & Alignment
+3. Typography
+4. Divider Styles
+5. Image Styles
+  - Image with Caption
+6. Form Styles
+7. Button Styles
+  - Button Sizes
+  - Button Shapes
+  - Button Color Scheme
+  - Button Tabs
+8. Grid Layout
+  - Rows
+  - Columns
+  - Column with Border
+  - Responsive Utilities
+9. Table Styles
+10. Site Structure
+--------------------------------------------------------------*/
+
+.pattern-bg{
+  background: url(images/dotted-circle.svg) no-repeat;
+  position: absolute;
+  top: 0px;
+  right: 0;
+  bottom: 0;
+  left: -190px;
+  z-index: -1;
+  width: 40%;
+}
