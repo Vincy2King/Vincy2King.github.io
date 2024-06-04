@@ -12,9 +12,9 @@
     <meta name="description" content="">
     <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.min.css"
           rel="stylesheet">
-    <link id="theme" rel="stylesheet" type="text/css" href="css/greyson-theme.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="fonts/icomoon/icomoon.css">
+    <link id="theme" rel="stylesheet" type="text/css" href="../css/greyson-theme.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="../fonts/icomoon/icomoon.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,20 +27,20 @@
     <meta name="keywords" content="Corporate Business Shopse HTML5 Css3 Template App Product">
     <meta name="description" content="appnox - Product Landing HTML5 Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.ico">
 
     <!-- css here -->
-    <link rel="stylesheet" href="static/css/bootstrap.min.css">
-    <link rel="stylesheet" href="static/css/meanmenu.css">
-    <link rel="stylesheet" href="static/css/animate.min.css">
-    <link rel="stylesheet" href="static/css/magnific-popup.css">
-    <link rel="stylesheet" href="static/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="static/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="static/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="static/css/scrolltop.css">
-    <link rel="stylesheet" href="static/css/default.css">
-    <link rel="stylesheet" href="static/css/style.css">
-    <link rel="stylesheet" href="static/css/responsive.css">
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/meanmenu.css">
+    <link rel="stylesheet" href="../static/css/animate.min.css">
+    <link rel="stylesheet" href="../static/css/magnific-popup.css">
+    <link rel="stylesheet" href="../static/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../static/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../static/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../static/css/scrolltop.css">
+    <link rel="stylesheet" href="../static/css/default.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/responsive.css">
 </head>
 <body>
 
@@ -49,7 +49,7 @@
 <header id="header">
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
+            <a class="navbar-brand" href="../index.html"><img src="../images/logo.png" alt="logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                     aria-controls="offcanvasNavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -64,7 +64,7 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end fw-bold fs-6 text-uppercase flex-grow-1 pe-3 gap-3">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#"></a>
@@ -73,8 +73,8 @@
                             <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
                                aria-haspopup="true" aria-expanded="false">Pages</a>
                             <div class="dropdown-menu" aria-labelledby="dropdownId">
-                                <a class="dropdown-item" href="index.html">Blog</a>
-                                <a class="dropdown-item" href="index.html">Blog Single</a>
+                                <a class="dropdown-item" href="../index.html">Blog</a>
+                                <a class="dropdown-item" href="../index.html">Blog Single</a>
                             </div>
                         </li>
                         <li class="nav-item">
@@ -120,7 +120,7 @@
                             其主要动机：专注于引入外部知识来回答问题，开发专门用于处理外部知识的架构，而不是提出一个新颖的框架或者vision-and-language adapters。
                             关注数据集：MLLM处理与外部数据相关的Query能力的评估（需要引入外部知识的评估） Infoseek 和 Encyclopedic-VQA. </p>
                         <p>&ensp;&ensp;&ensp;号称：第一个利用外部资源检索能力的MLLM</p>
-                        <div style="text-align: center"><img src="images\stance\wiki-llava.jpg" alt="" style="zoom:50%"></div>
+                        <div style="text-align: center"><img src="../images\stance\wiki-llava.jpg" alt="" style="zoom:50%"></div>
                         <p>&ensp;&ensp;&ensp;第一阶段（从文档中提取文档、图像、文本标题）： 输入图像I，使用文档标题作为可检索键，在外部知识中进行近似k-最近邻搜索。</p>
                         <p>&ensp;&ensp;&ensp;第二阶段（知识检索器返回与上述过程检索到的最相关项目相关联的前k个文档）： 分析每个检索到的文档，识别和用户问题最相关的段落，使用Contriever框架嵌入每个选定文档的块，
                             计算嵌入之间的内积作为相似性，每个文档检索n个最适当的段落，得到 K*n个段落 。最终Prompt设计，丰富了上下文：</p>
@@ -149,14 +149,14 @@
                             presidential election. However, progress on stance detection has been hampered by the
                             absence of large annotated datasets. In this paper, we present P-Stance, a large stance
                             detection dataset in the political domain, which contains 21,574 labeled tweets. </p>
-
+                        <p> 21,574 English tweets in the political domain and each tweet is annotated with a stance toward one of three different targets: “Donald Trump,” “Joe Biden,” and “Bernie Sanders.”</p>
                         <h3 id="section3" style="color: coral;margin-top: 50px;font-weight: bold">3. Methods</h3>
                         <h5>
                             <a href="https://wrap.warwick.ac.uk/149336/1/WRAP-Target-adaptive-graph-cross-target-stance-detection-2021.pdf">3.1
                                 2021 www Target-adaptive Graph for Cross-target Stance Detection</a></h5>
                         <p>在实践中，我们需要处理注释的训练数据中看不到的目标。因此，检测未知或看不见的目标的姿态是一个重要的研究问题。
                             本文提出了一种新的方法，可以自动识别和调整单词在立场表达中相对于特定目标所扮演的目标相关和目标无关的角色，从而实现跨目标立场检测。</p>
-                        <div style="text-align: center"><img src="images\stance\3-1.jpg" alt="" style="zoom:50%"></div>
+                        <div style="text-align: center"><img src="../images\stance\3-1.jpg" alt="" style="zoom:50%"></div>
                         <p>为了更好地解决跨目标立场检测问题，本文作者提出了一种新颖的框架，通过构建从目标内和跨目标视角的目标自适应异构图（包括句法依存和语用信息），
                             利用立场表达对目标的基本词级语用依赖性来实现。通过利用不同目标之间的相互作用，所提出的框架可以更准确地捕捉立场信息，并在不同目标下更好地提炼知识，提高可解释性。
                             具体来说：1）作者首先计算词级的目标特定语用权重。为了捕捉单词在针对目标的立场表达中的固有角色，作者计算该单词在目标语境中的相对出现频率，并与其他目标进行比较。
@@ -170,7 +170,7 @@
                         <p>有针对性的立场检测旨在对固执己见的文本对预定义目标的态度进行分类。以前的方法主要集中在目标设置中，即使用特定于同一目标的数据来训练和测试模型。
                             在实际情况下，我们关注的目标可能很少或没有标记数据，这限制了我们训练特定目标的模型。
                             在本文中，我们研究了跨目标立场检测问题，利用源目标的标记数据来学习可以适应目标的模型。</p>
-                        <div style="text-align: center"><img src="images\stance\3-2.jpg" alt="" style="zoom:50%"></div>
+                        <div style="text-align: center"><img src="../images\stance\3-2.jpg" alt="" style="zoom:50%"></div>
                         <p>跨目标立场检测任务的关键研究挑战在于如何有效地建模可转移的知识，以促进在不同目标之间的适应。直观上，用户经常讨论某个目标的子主题，关于这些主题的表达可以用来推断他们对目标的立场。
                             此外，两个目标之间共享的常见主题可以作为可转移的知识，帮助模型在目标之间的适应。作者旨在将这种主题知识融入立场检测模型，以提高其跨目标适应能力。
                             为此，作者提出了一种跨目标立场检测方法，该方法将主题知识获取和目标不变文本表示学习整合到一个统一的端到端框架中。为了有效获取可转移的主题知识并使这一过程能够通过反向传播进行训练，
@@ -180,7 +180,7 @@
                             作者提供了238228条扩展数据集（其中来自任何一个给定网站的段落不超过1000个）和984539条未过滤数据集（来自任何给定网站的不受限制的段落数量）。
                             动机：立场检测对于理解互联网上的不同态度和信仰非常重要。然而，考虑到一篇文章对给定主题的立场往往高度依赖于该主题，因此很难建立一个能够推广到未见主题的立场检测模型。
                             在这项工作中，作者建议使用对比学习以及覆盖各种不同主题的新闻文章的未标记数据集来训练主题不可知（TAG）和主题感知（TAW）嵌入，用于下游立场检测。</p>
-                        <div style="text-align: center"><img src="images\stance\3-3.jpg" alt="" style="zoom:50%"></div>
+                        <div style="text-align: center"><img src="../images\stance\3-3.jpg" alt="" style="zoom:50%"></div>
                         <p>几项研究已经建立了特定主题的立场分类器，并在特定目标上取得了令人满意的结果；然而，这些方法往往无法推广到其训练领域之外的主题，限制了它们在现实世界中的应用。
                             最近的研究试图通过利用通用立场特征、常识推理和广义的主题表示来缓解这个问题，在预测先前未见过的主题（零样本立场检测）和训练样本较少的主题（少样本立场检测）方面取得了更好的性能。
                             基于这些见解，作者创建并发布了用于设计主题感知（TAW）嵌入和广义主题无关（TAG）立场嵌入的合成数据集，以用于下游立场分类任务。通过利用主题感知和主题无关的视角和嵌入，
@@ -194,13 +194,28 @@
                             通过在合成数据集上进行训练，利用跨不同主题的共同立场特征（TAG），并利用丰富的嵌入潜在特征（TAW）提取特定主题的具体特征，
                             作者的TATA模型在当前的立场分类基准上实现了最先进的性能。</p>
                         <p>Question: Emmm 我对这篇工作有些无语，为什么是新闻文章的立场，而不是相应评论？</p>
+
+                        <h5><a href="http://arxiv.org/abs/1908.03146">2019 ACM HCI: Your stance is exposed! analysing possible factors for stance detection on social media</a></h5>
+                        <p>从多大程度上可以推断出用户对某个主题的立场呢？大多数关于立场检测的研究都集中在分析用户关于给定主题的帖子以预测立场。然而，社交媒体中的立场可以从可能反映用户立场（包括帖子和在线互动）的信号混合中推断出来。
+                            本文研究了用户的各种在线特征，以检测他们对不同主题的立场。我们比较了多组特征，包括主题内容，网络交互，用户偏好和在线网络连接。
+                            本文目标是了解可以反映用户立场的在线信号。实验应用于来自SemEval立场检测任务的推文数据集，该任务涵盖五个主题。研究结果表明，可以通过用户在线活动的多个信号来检测用户的立场，
+                            包括他们关于主题的帖子，他们与之交互或跟踪的网络，他们访问的网站以及他们喜欢的内容。
+                            使用不同网络特征的立场建模的性能与仅使用文本内容的最新报告模型相当。此外，结合网络和内容功能，在SemEval数据集上获得了迄今为止报告的最高性能，F-measure为72.49％。
+                            作者进一步展示了一个广泛的分析，以显示这些不同的特征如何能够揭示立场。本研究结果具有明显的隐私含义，他们强调用户的在线社会网络中的立场是根深蒂固的。
+                            原则上，可以通过他们的交互和联系进行分析，即使他们没有发布有关该主题的内容。</p>
+                        <h5><a href="http://arxiv.org/abs/1908.03181">2019 ICSI: Assessing Sentiment of the Expressed Stance on  Social Media</a></h5>
+                        <p>立场检测是对给定的主题或实体进行支持或反对的观点推断的任务。人们可以通过使用正面或负面语言来表达对主题的观点。本文从情感极性的角度考察了社会媒体如何表达这种立场。
+                            在观点发现方面，人们对立场和情绪之间的相似性存在明显的误解，其中负面情绪被认为是反对立场，积极的情绪被认为是支持立场。
+                            为了分析立场和情感之间的关系，本文构建了一个包含四个主题的新数据集，并研究人们如何表达他们对这些主题的观点。
+                            作者通过对流行的立场基准SemEval立场数据集进行进一步分析来验证结果。研究表明，情绪和立场不是高度一致的，因此简单的情感极性不能仅用于表示对特定主题的立场。</p>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </main>
-<script src="js/jquery-1.11.0.min.js"></script>
+<script src="../js/jquery-1.11.0.min.js"></script>
 <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
