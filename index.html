@@ -1,209 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Home</title>
-<!-- Stylesheets -->
-<link href="css/bootstrap.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-<link href="css/responsive.css" rel="stylesheet">
 
-<!--Favicon-->
-<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-<link rel="icon" href="images/favicon.png" type="image/x-icon">
-<!-- Responsive -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
-<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <!-- Stylesheets -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
 </head>
 
 <body>
 
-<div class="page-wrapper default-version">
- 	
-    <!-- Preloader -->
-    <div class="preloader"></div>
+    <div class="page-wrapper default-version">
 
-    <div class="page-background">
-        <div class="image-1"><img src="images/icons/shape/icon-1.png" alt=""></div>
-        <div class="image-7"><img src="images/icons/shape/icon-7.png" alt=""></div>
-        <canvas id="canvas"></canvas>
-    </div>
-    
-    <!-- Mobile menu -->
-    <div class="mobile-menu">
-        <div class="container">
-            <!--Nav Outer-->
-            <div class="nav-outer clearfix">
-                <div class="logo"><a href="index.html"><img src="images/logo.png" alt=""></a></div>
-                <!-- Main Menu -->
-                <nav class="main-menu">
-                    <div class="navbar-header">
-                        <!-- Toggle Button -->      
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    </div>
-                    
-                    <div class="navbar-collapse collapse scroll-nav clearfix">
-                        <ul class="navigation clearfix">
-                            
-                            <li class="current"><a href="#home">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <!-- <li><a href="#resume">Resume</a></li> -->
-                            <li><a href="#services">Research</a></li>
-                            <!-- <li><a href="#work">Works</a></li> -->
-                            <li><a href="#blog">Blog</a></li>
-                            <li><a href="#contact">Contact</a></li>
+        <!-- Preloader -->
+        <div class="preloader"></div>
 
-                         </ul>
-                    </div>
-                </nav>
-                <!-- Main Menu End-->                        
-            </div>
-            <!--Nav Outer End-->            
+        <div class="page-background">
+            <div class="image-1"><img src="images/icons/shape/icon-1.png" alt=""></div>
+            <div class="image-7"><img src="images/icons/shape/icon-7.png" alt=""></div>
+            <canvas id="canvas"></canvas>
         </div>
-    </div>
- 	
-    <div class="card-outer">
-        <div class="scroll-box">
-            <div class="container" data-animation-in="fadeInLeft" data-animation-out="fadeOutLeft">
-                <div class="card-wrapper">
-                    <div class="author-info" style="background-image:url(images/background/3.jpg)">
-                        <div class="image"><img src="images/resource/user.png" alt=""></div>
-                        <div class="author">
-                            <h3>Bingbing Wang</h3>
-                            <div class="designation">
-                                 Hi I
-                                <div class="typing-title">
-                                	<p><strong>am a Ph.D student.</strong></p>
-                                	<p><strong>study at HIT, Shenzhen.</strong></p>
-                                	<p><strong>major in NLP.</strong></p>
-                        	</div>
-                                <span class="typed-title"></span>
-                            </div>
+
+        <!-- Mobile menu -->
+        <div class="mobile-menu">
+            <div class="container">
+                <!--Nav Outer-->
+                <div class="nav-outer clearfix">
+                    <div class="logo"><a href="index.html"><img src="images/logo.png" alt=""></a></div>
+                    <!-- Main Menu -->
+                    <nav class="main-menu">
+                        <div class="navbar-header">
+                            <!-- Toggle Button -->
+                            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target=".navbar-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
                         </div>
-                        <div class="link-btn">
-                            <a href="#" class="theme-btn btn-style-one">Natural Language Processing</a>
-                        </div>
-                    </div>
-                    <div class="card-inner-box">
-                        <header class="header wow fadeInLeft" data-wow-duration="1.5s">
-                            <ul class="main-menu">
-                                <li class="active home"><a class="logo" href="#home"><img src="images/logo.png" alt=""></a></li>
-                                <li><a href="#about"><i class="flaticon-social"></i>About</a></li>
-                                <!-- <li><a href="#resume"><i class="flaticon-curriculum"></i>Resume</a></li> -->
-                                <li><a href="#services"><i class="flaticon-layers-1"></i>Research</a></li>
-                                <!-- <li><a href="#work"><i class="flaticon-tools"></i>Works</a></li> -->
-                                <li><a href="#blog"><i class="flaticon-blog"></i>Blog</a></li>
-                                <li><a href="#contact"><i class="flaticon-send-mail"></i>Contact</a></li>
+
+                        <div class="navbar-collapse collapse scroll-nav clearfix">
+                            <ul class="navigation clearfix">
+
+                                <li class="current"><a href="#home">Home</a></li>
+                                <li><a href="#about">About</a></li>
+                                <!-- <li><a href="#resume">Resume</a></li> -->
+                                <li><a href="#services">Research</a></li>
+                                <!-- <li><a href="#work">Works</a></li> -->
+                                <li><a href="#blog">Blog</a></li>
+                                <li><a href="#contact">Contact</a></li>
+
                             </ul>
-                        </header>
+                        </div>
+                    </nav>
+                    <!-- Main Menu End-->
+                </div>
+                <!--Nav Outer End-->
+            </div>
+        </div>
 
-                        <!-- card item -->
-                        <div class="card-home card-item active" id="home" style="background-image:url(images/background/1.jpg)">
-
-                            <div class="card-inner wow fadeInUp" data-wow-duration="2s">
-                                <div class="image"><img src="images/resource/user.png" alt=""></div>
-                                <div class="author">
-                                    <h3>Bingbing Wang</h3>
-                                    <div class="designation">
-                                        Hi i
-                                        <div class="typing-title">
-                                            <p><strong>am a Ph.D student.</strong></p>
-                                            <p><strong>study at HIT, Shenzhen.</strong></p>
-                                            <p><strong>major in NLP.</strong></p>
-                                        </div>
-                                        <span class="typed-title"></span>
+        <div class="card-outer">
+            <div class="scroll-box">
+                <div class="container" data-animation-in="fadeInLeft" data-animation-out="fadeOutLeft">
+                    <div class="card-wrapper">
+                        <div class="author-info" style="background-image:url(images/background/3.jpg)">
+                            <div class="image"><img src="images/resource/user.png" alt=""></div>
+                            <div class="author">
+                                <h3>Bingbing Wang</h3>
+                                <div class="designation">
+                                    Hi I
+                                    <div class="typing-title">
+                                        <p><strong>am a Ph.D student.</strong></p>
+                                        <p><strong>study at HIT, Shenzhen.</strong></p>
+                                        <p><strong>major in NLP.</strong></p>
                                     </div>
-                                </div>
-                                <div class="text">Welcome to my personal homepage! I'm delighted to share my thoughts and experiences with you and look forward to engaging in fruitful discussions and interactions.</div>
-                                <div class="link-btn">
-                                    <a href="#" class="theme-btn btn-style-one">Natural Language Processing</a>
-                                    <a href="#" class="theme-btn btn-style-two">Multimodal Model</a>
+                                    <span class="typed-title"></span>
                                 </div>
                             </div>
-                            
+                            <div class="link-btn">
+                                <a href="#" class="theme-btn btn-style-one">Natural Language Processing</a>
+                            </div>
                         </div>
-                        <!-- end item -->
+                        <div class="card-inner-box">
+                            <header class="header wow fadeInLeft" data-wow-duration="1.5s">
+                                <ul class="main-menu">
+                                    <li class="active home"><a class="logo" href="#home"><img src="images/logo.png"
+                                                alt=""></a></li>
+                                    <li><a href="#about"><i class="flaticon-social"></i>About</a></li>
+                                    <!-- <li><a href="#resume"><i class="flaticon-curriculum"></i>Resume</a></li> -->
+                                    <li><a href="#services"><i class="flaticon-layers-1"></i>Research</a></li>
+                                    <!-- <li><a href="#work"><i class="flaticon-tools"></i>Works</a></li> -->
+                                    <li><a href="#blog"><i class="flaticon-blog"></i>Blog</a></li>
+                                    <li><a href="#contact"><i class="flaticon-send-mail"></i>Contact</a></li>
+                                </ul>
+                            </header>
 
-                        <!-- card item -->
-                        <div class="card-about card-item" id="about" style="background-image:url(images/background/2.jpg)">
-                            <div class="card-inner">
-                                <h4 class="title">About Me</h4>
-                                <div class="text">I am currently a Ph.D at Harbin Institute of Technology, Shenzhen, specializing in Natural Language Processing, Multimodal Sentiment Analysis and Multi-Agent Mechanism.</div>
-                                <div class="info-list">
+                            <!-- card item -->
+                            <div class="card-home card-item active" id="home"
+                                style="background-image:url(images/background/1.jpg)">
+
+                                <div class="card-inner wow fadeInUp" data-wow-duration="2s">
+                                    <div class="image"><img src="images/resource/user.png" alt=""></div>
+                                    <div class="author">
+                                        <h3>Bingbing Wang</h3>
+                                        <div class="designation">
+                                            Hi i
+                                            <div class="typing-title">
+                                                <p><strong>am a Ph.D student.</strong></p>
+                                                <p><strong>study at HIT, Shenzhen.</strong></p>
+                                                <p><strong>major in NLP.</strong></p>
+                                            </div>
+                                            <span class="typed-title"></span>
+                                        </div>
+                                    </div>
+                                    <div class="text">Welcome to my personal homepage! I'm delighted to share my
+                                        thoughts and experiences with you and look forward to engaging in fruitful
+                                        discussions and interactions.</div>
+                                    <div class="link-btn">
+                                        <a href="#" class="theme-btn btn-style-one">Natural Language Processing</a>
+                                        <a href="#" class="theme-btn btn-style-two">Multimodal Model</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- end item -->
+
+                            <!-- card item -->
+                            <div class="card-about card-item" id="about"
+                                style="background-image:url(images/background/2.jpg)">
+                                <div class="card-inner">
+                                    <h4 class="title">About Me</h4>
+                                    <div class="text">I am currently a Ph.D at Harbin Institute of Technology, Shenzhen,
+                                        specializing in Natural Language Processing, Multimodal Sentiment Analysis and
+                                        Multi-Agent Mechanism.</div>
+                                    <div class="info-list">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <ul class="list-style-one">
+                                                    <li><strong>Name:</strong> Bingbing Wang</li>
+                                                    <li><strong>Address:</strong> Shenzhen, China</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <ul class="list-style-one">
+                                                    <li><strong>Email:</strong> icy2invincible@gmail.com</li>
+                                                    <li><strong>Grade:</strong> Second year</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h4 class="title">Skills</h4>
                                     <div class="row">
-                                        <div class="col-md-6">
-                                            <ul class="list-style-one">
-                                                <li><strong>Name:</strong>  Bingbing Wang</li>
-                                                <li><strong>Address:</strong>  Shenzhen, China</li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <ul class="list-style-one">
-                                                <li><strong>Email:</strong>  icy2invincible@gmail.com</li>
-                                                <li><strong>Grade:</strong>  Second year</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>                                    
-                                <h4 class="title">Skills</h4>
-                                <div class="row">
-                                    <!-- About Block -->
-                                    <div class="skill-block col-md-3 col-sm-4 col-xs-6">
-                                        <div class="inner-box">
-                                            <div class="graph-outer">
-                                                <input type="text" class="dial" data-fgColor="#9147ff" data-bgColor="#f5f5f5" data-width="90" data-height="90" data-linecap="normal"  value="75">
-                                                <div class="inner-text count-box"><span class="count-text" data-stop="85" data-speed="1000"></span>%</div>
+                                        <!-- About Block -->
+                                        <div class="skill-block col-md-3 col-sm-4 col-xs-6">
+                                            <div class="inner-box">
+                                                <div class="graph-outer">
+                                                    <input type="text" class="dial" data-fgColor="#9147ff"
+                                                        data-bgColor="#f5f5f5" data-width="90" data-height="90"
+                                                        data-linecap="normal" value="75">
+                                                    <div class="inner-text count-box"><span class="count-text"
+                                                            data-stop="85" data-speed="1000"></span>%</div>
+                                                </div>
+                                                <h3>English</h3>
                                             </div>
-                                            <h3>English</h3>
+                                        </div>
+
+                                        <!-- About Block -->
+                                        <div class="skill-block col-md-3 col-sm-4 col-xs-6">
+                                            <div class="inner-box">
+                                                <div class="graph-outer">
+                                                    <input type="text" class="dial" data-fgColor="#ff5e7e"
+                                                        data-bgColor="#f5f5f5" data-width="90" data-height="90"
+                                                        data-linecap="normal" value="75">
+                                                    <div class="inner-text count-box"><span class="count-text"
+                                                            data-stop="95" data-speed="2000"></span>%</div>
+                                                </div>
+                                                <h3>Python</h3>
+                                            </div>
+                                        </div>
+
+                                        <!-- About Block -->
+                                        <div class="skill-block col-md-3 col-sm-4 col-xs-6">
+                                            <div class="inner-box">
+                                                <div class="graph-outer">
+                                                    <input type="text" class="dial" data-fgColor="#ffc713"
+                                                        data-bgColor="#f5f5f5" data-width="90" data-height="90"
+                                                        data-linecap="normal" value="75">
+                                                    <div class="inner-text count-box"><span class="count-text"
+                                                            data-stop="75" data-speed="2000"></span>%</div>
+                                                </div>
+                                                <h3>C/C++</h3>
+                                            </div>
+                                        </div>
+
+                                        <!-- About Block -->
+                                        <div class="skill-block col-md-3 col-sm-4 col-xs-6">
+                                            <div class="inner-box">
+                                                <div class="graph-outer">
+                                                    <input type="text" class="dial" data-fgColor="#51dbc3"
+                                                        data-bgColor="#f5f5f5" data-width="90" data-height="90"
+                                                        data-linecap="normal" value="75">
+                                                    <div class="inner-text count-box"><span class="count-text"
+                                                            data-stop="95" data-speed="2000"></span>%</div>
+                                                </div>
+                                                <h3>HTML</h3>
+                                            </div>
                                         </div>
                                     </div>
 
-                                    <!-- About Block -->
-                                    <div class="skill-block col-md-3 col-sm-4 col-xs-6">
-                                        <div class="inner-box">
-                                            <div class="graph-outer">
-                                                <input type="text" class="dial" data-fgColor="#ff5e7e" data-bgColor="#f5f5f5" data-width="90" data-height="90" data-linecap="normal"  value="75">
-                                                <div class="inner-text count-box"><span class="count-text" data-stop="95" data-speed="2000"></span>%</div>
-                                            </div>
-                                            <h3>Python</h3>
-                                        </div>
-                                    </div>
-
-                                    <!-- About Block -->
-                                    <div class="skill-block col-md-3 col-sm-4 col-xs-6">
-                                        <div class="inner-box">
-                                            <div class="graph-outer">
-                                                <input type="text" class="dial" data-fgColor="#ffc713" data-bgColor="#f5f5f5" data-width="90" data-height="90" data-linecap="normal"  value="75">
-                                                <div class="inner-text count-box"><span class="count-text" data-stop="75" data-speed="2000"></span>%</div>
-                                            </div>
-                                            <h3>C/C++</h3>
-                                        </div>
-                                    </div>
-
-                                    <!-- About Block -->
-                                    <div class="skill-block col-md-3 col-sm-4 col-xs-6">
-                                        <div class="inner-box">
-                                            <div class="graph-outer">
-                                                <input type="text" class="dial" data-fgColor="#51dbc3" data-bgColor="#f5f5f5" data-width="90" data-height="90" data-linecap="normal"  value="75">
-                                                <div class="inner-text count-box"><span class="count-text" data-stop="95" data-speed="2000"></span>%</div>
-                                            </div>
-                                            <h3>HTML</h3>
-                                        </div>
-                                    </div>
                                 </div>
-                                        
                             </div>
-                        </div>
-                        <!-- end item -->
+                            <!-- end item -->
 
-                        <!-- card item -->
-                        <!-- <div class="card-resume card-item" id="resume" style="background-image:url(images/background/2.jpg)">
+                            <!-- card item -->
+                            <!-- <div class="card-resume card-item" id="resume" style="background-image:url(images/background/2.jpg)">
                             <div class="card-inner">
                                 <h4 class="title">Resume</h4>
                                 <div class="row clearfix">
@@ -273,134 +294,161 @@
                                 </div>
                             </div>
                         </div> -->
-                        <!-- end item -->
-                        <!-- card item -->
-                        <div class="card-services card-item" id="services" style="background-image:url(images/background/2.jpg)">
-                            <div class="card-inner">
-                                <h4 class="title">Research</h4>
-                            
-                                <p>
-                                    <a href="#">Bridging Time Gaps: Temporal Logic Relations for Enhancing Temporal Reasoning in Large Language Models</a> (2025 | CCF A - SIGIR)<br>
-                                    X Song, B Liang, Y Sun, C Zhang, B Wang, R Xu
-                                </p><br>
-                            
-                                <p>
-                                    <a href="#">More Than Just A Conversation: A Multi-agent Reasoning Graph Knowledge Distillation for Conversational Stance Detection</a> (2025 | CCF A - SIGIR)<br>
-                                    B Wang, Z Bai, Q Wang, J Lin, M Yang, X Zeng, R Xu
-                                </p><br>
-                            
-                                <p>
-                                    <a href="#">Reply with Sticker: New Dataset and Model for Sticker Retrieval</a> (2025 | Preprint - IEEE TASLP)<br>
-                                    B Liang, B Wang, Z Bai, Q Lang, M Sun, K Hou, L Zhou, R Xu, KF Wong
-                                </p><br>
-                            
-                                <p>
-                                    <a href="#">CoreEval: Automatically Building Contamination-Resilient Datasets with Real-World Knowledge toward Reliable LLM Evaluation</a> (2025 | CCF A - ACL)<br>
-                                    J Zhao, B Wang, G Tu, Y Zhang, Q Wang, B Liang, J Li, R Xu
-                                </p><br>
-                            
-                                <p>
-                                    <a href="#">Bridging the Long-Term Gap: A Memory-Active Policy for Multi-Session Task-Oriented Dialogue</a> (2025 | Preprint - arXiv:2505.20231)<br>
-                                    Y Du, B Wang, Y He, B Liang, B Wang, Z Li, L Gui, JZ Pan, R Xu, KF Wong
-                                </p><br>
-                            
-                                <p>
-                                    <a href="#">SupportPlay: A Multi-Agent Role-Playing System for Personalized and Sustained Multimodal Emotional Support Conversation</a> (2025 | CCF A - WWW Companion)<br>
-                                    G Tu, B Wang, E Cambria, W Li, R Xu
-                                </p><br>
-                            
-                                <p>
-                                    <a href="#">A new formula for sticker retrieval: Reply with stickers in multi-modal and multi-session conversation</a> (2025 | CCF A - AAAI)<br>
-                                    B Wang, Y Du, B Liang, Z Bai, M Yang, B Wang, KF Wong, R Xu
-                                </p><br>
-                            
-                                <p>
-                                    <a href="#">GazeGCN: gaze-aware graph convolutional network for text classification</a> (2025 | CCF C - Neurocomputing)<br>
-                                    B Wang, B Liang, Z Bai, M Yang, L Gui, R Xu
-                                </p><br>
-                            
-                                <p>
-                                    <a href="#">Auto-ACE: An Automatic Answer Correctness Evaluation Method for Conversational Question Answering</a> (2024 | CCF None - SIGHAN)<br>
-                                    Z Bai, B Wang, B Liang, R Xu
-                                </p><br>
-                            
-                                <p>
-                                    <a href="#">Adversarial Learning for Multi-Lingual Entity Linking</a> (2024 | CCF None - SIGHAN)<br>
-                                    B Wang, B Liang, Z Bai, Y Ma
-                                </p><br>
-                            
-                                <p>
-                                    <a href="#">Gaze-infused BERT: Do human gaze signals help pre-trained language models?</a> (2024 | CCF C - Neural Computing and Applications)<br>
-                                    B Wang, B Liang, L Zhou, R Xu
-                                </p><br>
-                            
-                                <p>
-                                    <a href="#">What do they “meme”? A metaphor-aware multi-modal multi-task framework for fine-grained meme understanding</a> (2024 | CCF C - Knowledge-Based Systems)<br>
-                                    B Wang, S Huang, B Liang, G Tu, M Yang, R Xu
-                                </p><br>
-                            
-                                <p>
-                                    <a href="#">Sdif-da: A shallow-to-deep interaction framework with data augmentation for multi-modal intent detection</a> (2024 | CCF B - ICASSP)<br>
-                                    S Huang, L Qin, B Wang, G Tu, R Xu
-                                </p><br>
-                            
-                                <p>
-                                    <a href="#">Towards Real-World Stickers Use: A New Dataset for Multi-Tag Sticker Recognition</a> (2024 | Preprint - arXiv:2403.05428)<br>
-                                    B Wang, B Liang, CM Feng, W Zuo, Z Bai, S Huang, KF Wong, X Zeng, ...
-                                </p><br>
-                            
-                                <p>
-                                    <a href="#">Improving few-shot and zero-shot entity linking with coarse-to-fine lexicon-based retriever</a> (2023 | CCF C - NLPCC)<br>
-                                    S Huang, B Wang, L Qin, Q Zhao, R Xu
-                                </p><br>
-                            
-                                <p>
-                                    <a href="#">A Coarse-to-Fine Text Matching Framework for Customer Service Question Answering</a> (2022 | CCF None - ICCC)<br>
-                                    A Li, X Liang, M Zhang, B Wang, G Chen, J Gao, Q Lin, R Xu
-                                </p><br>
-                            
-                                <p>
-                                    <a href="#">SEMGraph: Incorporating sentiment knowledge and eye movement into graph model for sentiment analysis</a> (2022 | CCF B - EMNLP)<br>
-                                    B Wang, B Liang, J Du, M Yang, R Xu
-                                </p><br>
-                            
-                                <p>
-                                    <a href="#">基于深度学习的人脸颜值评估系统</a> (2022 | CCF None - 计算机系统应用)<br>
-                                    王冰冰，麦成源，庄杰颖，潘家辉，梁艳
-                                </p><br>
-                            
-                                <p>
-                                    <a href="#">基于脑电信号的青少年注意力检测和训练系统</a> (2021 | CCF None - 计算机系统应用)<br>
-                                    王冰冰，许泽举，罗通，潘家辉
-                                </p><br>
-                            
-                                <p>
-                                    <a href="#">Incorporation of dynamic stopping strategy into the hybrid P300 and SSVEP BCI-based communication</a> (2021 | CCF None - AIII)<br>
-                                    J Huang, J Zhang, B Wang, J Pan
-                                </p><br>
-                            
-                                <p>
-                                    <a href="#">MindLink-eumpy: an open-source python toolbox for multimodal emotion recognition</a> (2021 | CCF None - Frontiers in Human Neuroscience)<br>
-                                    R Li, Y Liang, X Liu, B Wang, W Huang, Z Cai, Y Ye, L Qiu, J Pan
-                                </p><br>
-                            
-                                <p>
-                                    <a href="#">基于人脸图像和脑电的连续情绪识别方法</a> (2021 | CCF None - 计算机系统应用)<br>
-                                    李瑞新，蔡兆信，王冰冰，潘家辉
-                                </p><br>
-                            
-                                <p>
-                                    <a href="#">EEG‐Based Closed‐Loop Neurofeedback for Attention Monitoring and Training in Young Adults</a> (2021 | CCF None - Journal of Healthcare Engineering)<br>
-                                    B Wang, Z Xu, T Luo, J Pan
-                                </p><br>
-                            
+                            <!-- end item -->
+                            <!-- card item -->
+                            <div class="card-services card-item" id="services"
+                                style="background-image:url(images/background/2.jpg)">
+                                <div class="card-inner">
+                                    <h4 class="title">Research</h4>
+
+                                    <p>
+                                        <a href="#">Bridging Time Gaps: Temporal Logic Relations for Enhancing Temporal
+                                            Reasoning in Large Language Models</a> (2025 | CCF A - SIGIR)<br>
+                                        X Song, B Liang, Y Sun, C Zhang, B Wang, R Xu
+                                    </p><br>
+
+                                    <p>
+                                        <a href="#">More Than Just A Conversation: A Multi-agent Reasoning Graph
+                                            Knowledge Distillation for Conversational Stance Detection</a> (2025 | CCF A
+                                        - SIGIR)<br>
+                                        B Wang, Z Bai, Q Wang, J Lin, M Yang, X Zeng, R Xu
+                                    </p><br>
+
+                                    <p>
+                                        <a href="#">Reply with Sticker: New Dataset and Model for Sticker Retrieval</a>
+                                        (2025 | Preprint - IEEE TASLP)<br>
+                                        B Liang, B Wang, Z Bai, Q Lang, M Sun, K Hou, L Zhou, R Xu, KF Wong
+                                    </p><br>
+
+                                    <p>
+                                        <a href="#">CoreEval: Automatically Building Contamination-Resilient Datasets
+                                            with Real-World Knowledge toward Reliable LLM Evaluation</a> (2025 | CCF A -
+                                        ACL)<br>
+                                        J Zhao, B Wang, G Tu, Y Zhang, Q Wang, B Liang, J Li, R Xu
+                                    </p><br>
+
+                                    <p>
+                                        <a href="#">Bridging the Long-Term Gap: A Memory-Active Policy for Multi-Session
+                                            Task-Oriented Dialogue</a> (2025 | Preprint - arXiv:2505.20231)<br>
+                                        Y Du, B Wang, Y He, B Liang, B Wang, Z Li, L Gui, JZ Pan, R Xu, KF Wong
+                                    </p><br>
+
+                                    <p>
+                                        <a href="#">SupportPlay: A Multi-Agent Role-Playing System for Personalized and
+                                            Sustained Multimodal Emotional Support Conversation</a> (2025 | CCF A - WWW
+                                        Companion)<br>
+                                        G Tu, B Wang, E Cambria, W Li, R Xu
+                                    </p><br>
+
+                                    <p>
+                                        <a href="#">A new formula for sticker retrieval: Reply with stickers in
+                                            multi-modal and multi-session conversation</a> (2025 | CCF A - AAAI)<br>
+                                        B Wang, Y Du, B Liang, Z Bai, M Yang, B Wang, KF Wong, R Xu
+                                    </p><br>
+
+                                    <p>
+                                        <a href="#">GazeGCN: gaze-aware graph convolutional network for text
+                                            classification</a> (2025 | CCF C - Neurocomputing)<br>
+                                        B Wang, B Liang, Z Bai, M Yang, L Gui, R Xu
+                                    </p><br>
+
+                                    <p>
+                                        <a href="#">Auto-ACE: An Automatic Answer Correctness Evaluation Method for
+                                            Conversational Question Answering</a> (2024 | CCF None - SIGHAN)<br>
+                                        Z Bai, B Wang, B Liang, R Xu
+                                    </p><br>
+
+                                    <p>
+                                        <a href="#">Adversarial Learning for Multi-Lingual Entity Linking</a> (2024 |
+                                        CCF None - SIGHAN)<br>
+                                        B Wang, B Liang, Z Bai, Y Ma
+                                    </p><br>
+
+                                    <p>
+                                        <a href="#">Gaze-infused BERT: Do human gaze signals help pre-trained language
+                                            models?</a> (2024 | CCF C - Neural Computing and Applications)<br>
+                                        B Wang, B Liang, L Zhou, R Xu
+                                    </p><br>
+
+                                    <p>
+                                        <a href="#">What do they “meme”? A metaphor-aware multi-modal multi-task
+                                            framework for fine-grained meme understanding</a> (2024 | CCF C -
+                                        Knowledge-Based Systems)<br>
+                                        B Wang, S Huang, B Liang, G Tu, M Yang, R Xu
+                                    </p><br>
+
+                                    <p>
+                                        <a href="#">Sdif-da: A shallow-to-deep interaction framework with data
+                                            augmentation for multi-modal intent detection</a> (2024 | CCF B -
+                                        ICASSP)<br>
+                                        S Huang, L Qin, B Wang, G Tu, R Xu
+                                    </p><br>
+
+                                    <p>
+                                        <a href="#">Towards Real-World Stickers Use: A New Dataset for Multi-Tag Sticker
+                                            Recognition</a> (2024 | Preprint - arXiv:2403.05428)<br>
+                                        B Wang, B Liang, CM Feng, W Zuo, Z Bai, S Huang, KF Wong, X Zeng, ...
+                                    </p><br>
+
+                                    <p>
+                                        <a href="#">Improving few-shot and zero-shot entity linking with coarse-to-fine
+                                            lexicon-based retriever</a> (2023 | CCF C - NLPCC)<br>
+                                        S Huang, B Wang, L Qin, Q Zhao, R Xu
+                                    </p><br>
+
+                                    <p>
+                                        <a href="#">A Coarse-to-Fine Text Matching Framework for Customer Service
+                                            Question Answering</a> (2022 | CCF None - ICCC)<br>
+                                        A Li, X Liang, M Zhang, B Wang, G Chen, J Gao, Q Lin, R Xu
+                                    </p><br>
+
+                                    <p>
+                                        <a href="#">SEMGraph: Incorporating sentiment knowledge and eye movement into
+                                            graph model for sentiment analysis</a> (2022 | CCF B - EMNLP)<br>
+                                        B Wang, B Liang, J Du, M Yang, R Xu
+                                    </p><br>
+
+                                    <p>
+                                        <a href="#">基于深度学习的人脸颜值评估系统</a> (2022 | CCF None - 计算机系统应用)<br>
+                                        王冰冰，麦成源，庄杰颖，潘家辉，梁艳
+                                    </p><br>
+
+                                    <p>
+                                        <a href="#">基于脑电信号的青少年注意力检测和训练系统</a> (2021 | CCF None - 计算机系统应用)<br>
+                                        王冰冰，许泽举，罗通，潘家辉
+                                    </p><br>
+
+                                    <p>
+                                        <a href="#">Incorporation of dynamic stopping strategy into the hybrid P300 and
+                                            SSVEP BCI-based communication</a> (2021 | CCF None - AIII)<br>
+                                        J Huang, J Zhang, B Wang, J Pan
+                                    </p><br>
+
+                                    <p>
+                                        <a href="#">MindLink-eumpy: an open-source python toolbox for multimodal emotion
+                                            recognition</a> (2021 | CCF None - Frontiers in Human Neuroscience)<br>
+                                        R Li, Y Liang, X Liu, B Wang, W Huang, Z Cai, Y Ye, L Qiu, J Pan
+                                    </p><br>
+
+                                    <p>
+                                        <a href="#">基于人脸图像和脑电的连续情绪识别方法</a> (2021 | CCF None - 计算机系统应用)<br>
+                                        李瑞新，蔡兆信，王冰冰，潘家辉
+                                    </p><br>
+
+                                    <p>
+                                        <a href="#">EEG‐Based Closed‐Loop Neurofeedback for Attention Monitoring and
+                                            Training in Young Adults</a> (2021 | CCF None - Journal of Healthcare
+                                        Engineering)<br>
+                                        B Wang, Z Xu, T Luo, J Pan
+                                    </p><br>
+
+                                </div>
                             </div>
-                        </div>
-                        <!-- end item -->
-                        <!-- card item -->
+                            <!-- end item -->
+                            <!-- card item -->
 
 
-                        <!-- <div class="card-projects card-item" id="work" style="background-image:url(images/background/2.jpg)">
+                            <!-- <div class="card-projects card-item" id="work" style="background-image:url(images/background/2.jpg)">
                             <div class="card-inner">
                                 <h4 class="title">Works</h4>
                                 <div class="row">
@@ -503,16 +551,17 @@
                                 </div>
                             </div>
                         </div> -->
-                        <!-- end item -->
+                            <!-- end item -->
 
 
-                        <!-- card item -->
-                        <div class="card-blog card-item" id="blog" style="background-image:url(images/background/2.jpg)">
-                            <div class="card-inner">
-                                <!-- <h4 class="title">Blog</h4> -->
-                                <div class="news-block">
-                                    <div class="inner-box">
-                                        <!-- <div class="image">
+                            <!-- card item -->
+                            <div class="card-blog card-item" id="blog"
+                                style="background-image:url(images/background/2.jpg)">
+                                <div class="card-inner">
+                                    <!-- <h4 class="title">Blog</h4> -->
+                                    <div class="news-block">
+                                        <div class="inner-box">
+                                            <!-- <div class="image">
                                             <img src="images/stance/wiki-llava.jpg" alt="">
                                             <div class="overlay">
                                                 <a class="link-btn" href="html/TPAMI-blog.html">
@@ -520,26 +569,56 @@
                                                 </a>
                                             </div>
                                         </div> -->
-<!--                                        <div class="date"><strong>Update</strong> <br> 24.06.02</div>-->
-                                        <div class="lower-content">
-                                            <h4><a href="Paper/0812-结合贝叶斯的元推理范式设计.pdf">Position: LLMs Need a Bayesian Meta-Reasoning Framework
-                                                for More Robust and Generalizable Reasoning</a></h4>
-                                            <div class="post-meta">by Vincy, Update 25.08.12 <a href="Paper/0812-origin-Position.pdf" target="_blank" style="margin-left:10px;"">原文</a></div>
+                                            <!--                                        <div class="date"><strong>Update</strong> <br> 24.06.02</div>-->
+                                            <div class="lower-content">
+                                                <h4><a
+                                                        href="Paper/0814-Meta-Thinking in LLMs via Multi-Agent Reinforcement Learning.pdf">
+                                                        Meta-Thinking in LLMs via Multi-Agent
+                                                        Reinforcement Learning: A Survey</a></h4>
+                                                <div class="post-meta">by Vincy, Update 25.08.14 <a
+                                                        href="Paper/0814-origin.pdf" target="_blank"
+                                                        style="margin-left:10px;"">原文</a></div>
                                         </div>
-                                        <div class="lower-content">
-                                            <h4><a href="Paper/0812-基于偏好的奖励建模中重新思考Bradley-Terry模型.pdf">Rethinking the Bradley-Terry Models in Preference-based Reward
-                                                Modeling: Foundation, Theory, and its Alternatives</a></h4>
-                                            <div class="post-meta">by Vincy, Update 25.08.12 <a href="Paper/0812-origin-Position.pdf" target="_blank" style="margin-left:10px;"">原文</a></div>
+                                        <div class=" lower-content">
+                                                        <h4><a href="Paper/0813-Self-Play to Debias LLM.pdf">SPRec:
+                                                                Self-Play to Debias LLM-based Recommendation</a>
+                                                        </h4>
+                                                        <div class="post-meta">by Vincy, Update 25.08.13 <a
+                                                                href="Paper/0813-origin.pdf" target="_blank"
+                                                                style="margin-left:10px;"">原文</a></div>
                                         </div>
-                                        <div class="lower-content">
-                                            <h4><a href="html/TPAMI-blog.html">Investigation of TPAMI Paper</a></h4>
-                                            <div class="post-meta">by Vincy, Update 24.06.04 </div>
+                                        <div class=" lower-content">
+                                                                <h4><a href="Paper/0812-结合贝叶斯的元推理范式设计.pdf">Position:
+                                                                        LLMs Need a Bayesian Meta-Reasoning Framework
+                                                                        for More Robust and Generalizable Reasoning</a>
+                                                                </h4>
+                                                                <div class="post-meta">by Vincy, Update 25.08.12 <a
+                                                                        href="Paper/0812-origin-Position.pdf"
+                                                                        target="_blank" style="margin-left:10px;"">原文</a></div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="news-block">
-                                    <div class="inner-box">
-                                        <!-- <div class="image">
+                                        <div class=" lower-content">
+                                                                        <h4><a
+                                                                                href="Paper/0812-基于偏好的奖励建模中重新思考Bradley-Terry模型.pdf">Rethinking
+                                                                                the Bradley-Terry Models in
+                                                                                Preference-based Reward
+                                                                                Modeling: Foundation, Theory, and its
+                                                                                Alternatives</a></h4>
+                                                                        <div class="post-meta">by Vincy, Update 25.08.12
+                                                                            <a href="Paper/0812-origin-Position.pdf"
+                                                                                target="_blank"
+                                                                                style="margin-left:10px;"">原文</a></div>
+                                        </div>
+                                        <div class=" lower-content">
+                                                                                <h4><a href="html/TPAMI-blog.html">Investigation
+                                                                                        of TPAMI Paper</a></h4>
+                                                                                <div class="post-meta">by Vincy, Update
+                                                                                    24.06.04 </div>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                        <div class="news-block">
+                                                            <div class="inner-box">
+                                                                <!-- <div class="image">
                                             <img src="images/stance/wiki-llava.jpg" alt="">
                                             <div class="overlay">
                                                 <a class="link-btn" href="html/stance-blog.html">
@@ -547,16 +626,18 @@
                                                 </a>
                                             </div>
                                         </div> -->
-<!--                                        <div class="date"><strong>Update</strong> <br> 24.06.02</div>-->
-                                        <div class="lower-content">
-                                            <h4><a href="html/stance-blog.html">Stance Detection</a></h4>
-                                            <div class="post-meta">by Vincy, Update 24.06.02 </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="news-block">
-                                    <div class="inner-box">
-                                        <!-- <div class="image">
+                                                                <!--                                        <div class="date"><strong>Update</strong> <br> 24.06.02</div>-->
+                                                                <div class="lower-content">
+                                                                    <h4><a href="html/stance-blog.html">Stance
+                                                                            Detection</a></h4>
+                                                                    <div class="post-meta">by Vincy, Update 24.06.02
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="news-block">
+                                                            <div class="inner-box">
+                                                                <!-- <div class="image">
                                             <img src="images/VLM/5-2.png" alt="">
                                             <div class="overlay">
                                                 <a class="link-btn" href="html/vlm-blog.html">
@@ -564,129 +645,149 @@
                                                 </a>                                
                                             </div>
                                         </div> -->
-<!--                                        <div class="date"><strong>Update</strong> <br> 24.06.02</div>-->
-                                        <div class="lower-content">
-                                            <h4><a href="html/vlm-blog.html">Vision-Language Model</a></h4>
-                                            <div class="post-meta">by Vincy, Update 24.06.02 </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end item -->
-                        <!-- card item -->
-                        <div class="card-contact card-item" id="contact" style="background-image:url(images/background/2.jpg)">
-                            <div class="card-inner">
-                                <h3 class="title">Contact</h3>
-                                <h4>Keep In Touch</h4>
-                                <div class="row clearfix">
-                                    <div class="col-md-6">
-                                        <ul class="list-style-two">
-                                            <li><span class="icon flaticon-signs"></span>PO Box 16122 Collins Street <br> West Victoria 8007 Canada </li>
-                                            <li><span class="icon flaticon-smartphone"></span>(+48) 564-334-21-22-34 <br>(+48) 564-334-21-25</li>
-                                            <li><span class="icon flaticon-note-1"></span>info@cretox.com <br>info@example.com</li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="map-section">
-                                            <div class="home-google-map">
-                                                <div 
-                                                    class="google-map" 
-                                                    id="contact-google-map" 
-                                                    data-map-lat="40.700843" 
-                                                    data-map-lng="-74.004012" 
-                                                    data-icon-path="images/icons/map-marker.png"
-                                                    data-map-title="Chester"
-                                                    data-map-zoom="11" >
+                                                                <!--                                        <div class="date"><strong>Update</strong> <br> 24.06.02</div>-->
+                                                                <div class="lower-content">
+                                                                    <h4><a href="html/vlm-blog.html">Vision-Language
+                                                                            Model</a></h4>
+                                                                    <div class="post-meta">by Vincy, Update 24.06.02
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                 </div>
                                             </div>
+                                            <!-- end item -->
+                                            <!-- card item -->
+                                            <div class="card-contact card-item" id="contact"
+                                                style="background-image:url(images/background/2.jpg)">
+                                                <div class="card-inner">
+                                                    <h3 class="title">Contact</h3>
+                                                    <h4>Keep In Touch</h4>
+                                                    <div class="row clearfix">
+                                                        <div class="col-md-6">
+                                                            <ul class="list-style-two">
+                                                                <li><span class="icon flaticon-signs"></span>PO Box
+                                                                    16122 Collins Street <br> West Victoria 8007 Canada
+                                                                </li>
+                                                                <li><span class="icon flaticon-smartphone"></span>(+48)
+                                                                    564-334-21-22-34 <br>(+48) 564-334-21-25</li>
+                                                                <li><span
+                                                                        class="icon flaticon-note-1"></span>info@cretox.com
+                                                                    <br>info@example.com
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="map-section">
+                                                                <div class="home-google-map">
+                                                                    <div class="google-map" id="contact-google-map"
+                                                                        data-map-lat="40.700843"
+                                                                        data-map-lng="-74.004012"
+                                                                        data-icon-path="images/icons/map-marker.png"
+                                                                        data-map-title="Chester" data-map-zoom="11">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <h4>How Can I Help?</h4>
+                                                    <!-- Contact Form -->
+                                                    <div class="contact-form">
+                                                        <!--Comment Form-->
+                                                        <form method="post" action="sendemail.php" id="contact-form">
+                                                            <div class="row clearfix">
+
+                                                                <div class="col-md-6 form-group">
+                                                                    <input type="text" name="username"
+                                                                        placeholder="Name" required>
+                                                                </div>
+
+                                                                <div class="col-md-6 form-group">
+                                                                    <input type="email" name="email" placeholder="Email"
+                                                                        required>
+                                                                </div>
+
+                                                                <div class="col-md-6 form-group">
+                                                                    <input type="text" name="subject"
+                                                                        placeholder="Subject" required>
+                                                                </div>
+
+                                                                <div class="col-md-6 form-group">
+                                                                    <input type="text" name="phone" placeholder="Phone"
+                                                                        required>
+                                                                </div>
+
+                                                                <div class="col-lg-12 col-md-12 form-group">
+                                                                    <textarea name="message"
+                                                                        placeholder="Message"></textarea>
+                                                                </div>
+
+                                                                <div class="col-lg-12 col-md-12 form-group">
+                                                                    <button class="theme-btn btn-style-two"
+                                                                        type="submit" name="submit-form">Submit Now
+                                                                    </button>
+                                                                </div>
+
+                                                            </div>
+                                                        </form>
+
+                                                    </div>
+                                                    <!--End Contact Form -->
+
+                                                </div>
+                                            </div>
+                                            <!-- end item -->
+
                                         </div>
                                     </div>
-                                </div>
-                                <h4>How Can I Help?</h4>
-                                <!-- Contact Form -->
-                                <div class="contact-form">
-                                    <!--Comment Form-->
-                                    <form method="post" action="sendemail.php" id="contact-form">
-                                        <div class="row clearfix">
-                                            
-                                            <div class="col-md-6 form-group">
-                                                <input type="text" name="username" placeholder="Name" required>
-                                            </div>
-                                            
-                                            <div class="col-md-6 form-group">
-                                                <input type="email" name="email" placeholder="Email" required>
-                                            </div>
-                                            
-                                            <div class="col-md-6 form-group">
-                                                <input type="text" name="subject" placeholder="Subject" required>
-                                            </div>
 
-                                            <div class="col-md-6 form-group">
-                                                <input type="text" name="phone" placeholder="Phone" required>
-                                            </div>
-
-                                            <div class="col-lg-12 col-md-12 form-group">
-                                                <textarea name="message" placeholder="Message"></textarea>
-                                            </div>
-                                            
-                                            <div class="col-lg-12 col-md-12 form-group">
-                                                <button class="theme-btn btn-style-two" type="submit" name="submit-form">Submit Now </button>
-                                            </div>
-                                            
-                                        </div>
-                                    </form>
-                                        
                                 </div>
-                                <!--End Contact Form -->
-                                        
                             </div>
+
                         </div>
-                        <!-- end item -->
 
                     </div>
-                </div>
-                    
-            </div>
-        </div>
-            
-    </div>
-
-</div>
-<!--End pagewrapper-->
+                    <!--End pagewrapper-->
 
 
-<script src="js/jquery.js"></script> 
+                    <script src="js/jquery.js"></script>
 
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-<script src="js/owl.js"></script>
-<script src="js/wow.js"></script>
-<script src="js/appear.js"></script>
-<script src="js/jquery.fancybox.js"></script>
-<script src="js/element-in-view.js"></script>
-<script src="js/knob.js"></script>
-<script src="js/validate.js"></script>
-<script src="js/mousemoveparallax.js"></script>
-<script src="js/pagenav.js"></script>
-<script src="js/jquery-type.js"></script>
-<script src="js/jquery.nicescroll.min.js"></script>
-<script src="js/particle-alone.js"></script>
-<script src="js/script.js"></script>
+                    <script src="js/bootstrap.min.js"></script>
+                    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+                    <script src="js/owl.js"></script>
+                    <script src="js/wow.js"></script>
+                    <script src="js/appear.js"></script>
+                    <script src="js/jquery.fancybox.js"></script>
+                    <script src="js/element-in-view.js"></script>
+                    <script src="js/knob.js"></script>
+                    <script src="js/validate.js"></script>
+                    <script src="js/mousemoveparallax.js"></script>
+                    <script src="js/pagenav.js"></script>
+                    <script src="js/jquery-type.js"></script>
+                    <script src="js/jquery.nicescroll.min.js"></script>
+                    <script src="js/particle-alone.js"></script>
+                    <script src="js/script.js"></script>
 
-<!--Google Map APi Key-->
-<script src="http://ditu.google.cn/maps/api/js?key=AIzaSyATY4Rxc8jNvDpsK8ZetC7JyN4PFVYGCGM"></script>
-<script src="js/gmaps.js"></script>
-<script src="js/map-script.js"></script>
-<!--End Google Map APi-->
+                    <!--Google Map APi Key-->
+                    <script
+                        src="http://ditu.google.cn/maps/api/js?key=AIzaSyATY4Rxc8jNvDpsK8ZetC7JyN4PFVYGCGM"></script>
+                    <script src="js/gmaps.js"></script>
+                    <script src="js/map-script.js"></script>
+                    <!--End Google Map APi-->
 
-<style>
-.copyrights{text-indent:-9999px;height:0;line-height:0;font-size:0;overflow:hidden;}
-</style>
-<div class="copyrights">
+                    <style>
+                        .copyrights {
+                            text-indent: -9999px;
+                            height: 0;
+                            line-height: 0;
+                            font-size: 0;
+                            overflow: hidden;
+                        }
+                    </style>
+                    <!-- <div class="copyrights">
 	Collect from <a href="http://www.cssmoban.com/"  title="网站模板">模板之家</a>
 	<a href="http://cooco.net.cn/" title="组卷网">组卷网</a>
-</div>
+</div> -->
 </body>
-</html>
 
+</html>
